@@ -3,7 +3,9 @@
 
 [![NPM](https://nodei.co/npm/gulp-strip-debug.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-strip-debug)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-strip-debug/build/screenCapture.buildCi.browser.apidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-strip-debug/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-gulp-strip-debug/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-strip-debug/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-strip-debug/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-strip-debug/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-strip-debug/build/screenCapture.npmPackageListing.svg)
 
@@ -79,77 +81,6 @@
     },
     "version": "1.1.0"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-strip-debug](#apidoc.module.gulp-strip-debug)
-1.  [function <span class="apidocSignatureSpan"></span>gulp-strip-debug ()](#apidoc.element.gulp-strip-debug.gulp-strip-debug)
-1.  [function <span class="apidocSignatureSpan">gulp-strip-debug.</span>toString ()](#apidoc.element.gulp-strip-debug.toString)
-
-
-
-# <a name="apidoc.module.gulp-strip-debug"></a>[module gulp-strip-debug](#apidoc.module.gulp-strip-debug)
-
-#### <a name="apidoc.element.gulp-strip-debug.gulp-strip-debug"></a>[function <span class="apidocSignatureSpan"></span>gulp-strip-debug ()](#apidoc.element.gulp-strip-debug.gulp-strip-debug)
-- description and source-code
-```javascript
-gulp-strip-debug = function () {
-	return through.obj(function (file, enc, cb) {
-		if (file.isNull()) {
-			cb(null, file);
-			return;
-		}
-
-		if (file.isStream()) {
-			cb(new gutil.PluginError('gulp-strip-debug', 'Streaming not supported'));
-			return;
-		}
-
-		try {
-			file.contents = new Buffer(stripDebug(file.contents.toString()).toString());
-			this.push(file);
-		} catch (err) {
-			this.emit('error', new gutil.PluginError('gulp-strip-debug', err, {fileName: file.path}));
-		}
-
-		cb();
-	});
-}
-```
-- example usage
-```shell
-n/a
-```
-
-#### <a name="apidoc.element.gulp-strip-debug.toString"></a>[function <span class="apidocSignatureSpan">gulp-strip-debug.</span>toString ()](#apidoc.element.gulp-strip-debug.toString)
-- description and source-code
-```javascript
-toString = function () {
-    return toString;
-}
-```
-- example usage
-```shell
-...
-
-		if (file.isStream()) {
-			cb(new gutil.PluginError('gulp-strip-debug', 'Streaming not supported'));
-			return;
-		}
-
-		try {
-			file.contents = new Buffer(stripDebug(file.contents.toString()).toString());
-			this.push(file);
-		} catch (err) {
-			this.emit('error', new gutil.PluginError('gulp-strip-debug', err, {fileName: file.path}));
-		}
-
-		cb();
-	});
-...
 ```
 
 
