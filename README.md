@@ -1,4 +1,7 @@
-# api documentation for  [gulp-strip-debug (v1.1.0)](https://github.com/sindresorhus/gulp-strip-debug)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-strip-debug.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-strip-debug) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-strip-debug.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-strip-debug)
+# npmdoc-gulp-strip-debug
+
+#### basic api documentation for  [gulp-strip-debug (v1.1.0)](https://github.com/sindresorhus/gulp-strip-debug)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-strip-debug.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-strip-debug) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-strip-debug.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-strip-debug)
+
 #### Strip console and debugger statements from JavaScript code
 
 [![NPM](https://nodei.co/npm/gulp-strip-debug.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-strip-debug)
@@ -79,7 +82,8 @@
     "scripts": {
         "test": "mocha"
     },
-    "version": "1.1.0"
+    "version": "1.1.0",
+    "bin": {}
 }
 ```
 
